@@ -34,18 +34,23 @@ GENRES = ["fun, fact",
           "Film Noir",
           "Documentary"]
 
+
+
 @Client.on_message(
-  (filters.text & (filters.group | filters.private) & filters.incoming & filters.chat(AUTH_GROUPS), group=8) if AUTH_GROUPS else (filters.text & (filters.group | filters.private) & filters.incoming, group=8)
+    (filters.text & (filters.group | filters.private) & filters.incoming & filters.chat(AUTH_GROUPS)) if AUTH_GROUPS 
+    else (filters.text & (filters.group | filters.private) & filters.incoming), 
+    group=4
 )
 async def gobalFilter(client, message):
     await global_filters(client, message)
-    
+
 @Client.on_message(
-    (filters.text & (filters.group | filters.private) & filters.incoming & filters.chat(AUTH_GROUPS), group=8) if AUTH_GROUPS else (filters.text & (filters.group | filters.private) & filters.incoming, group=9)
+    (filters.text & (filters.group | filters.private) & filters.incoming & filters.chat(AUTH_GROUPS)) if AUTH_GROUPS 
+    else (filters.text & (filters.group | filters.private) & filters.incoming), 
+    group=5
 )
 async def autoFilter(client, message):
     await auto_filter(client, message)
-
 
 
 @Client.on_callback_query(filters.regex(r"^next"))
