@@ -34,12 +34,12 @@ auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-USERS_DB = environ.get('USERS_DB', "")
-FILES_DB1 = environ.get('FILES_DB1', "")
-FILES_DB2 = environ.get('FILES_DB2', "")
-FILES_DB3 = environ.get('FILES_DB3', "")
-FILES_DB4 = environ.get('FILES_DB4', "")
-FILES_DB5 = environ.get('FILES_DB5', "")
+USERS_DB = environ.get('USERS_DB', "mongodb+srv://sree:sree@customes.dvxyq.mongodb.net/?retryWrites=true&w=majority&appName=Customes")
+FILES_DB1 = environ.get('FILES_DB1', "mongodb+srv://Tesbot:Tesbot@cluster0.knmed45.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+FILES_DB2 = environ.get('FILES_DB2', "mongodb+srv://sree:sree@cluster0.p3oia.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+FILES_DB3 = environ.get('FILES_DB3', "mongodb+srv://sree:sree@cluster0.abfnx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+FILES_DB4 = environ.get('FILES_DB4', "mongodb+srv://sree:sree@cluster0.3mr6t.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+FILES_DB5 = environ.get('FILES_DB5', "mongodb+srv://sree:sree@cluster0.bnw5j.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "ponjikkaramup")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'ponisir_files')
 
