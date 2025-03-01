@@ -36,9 +36,8 @@ GENRES = ["fun, fact",
 
 @Client.on_message(filters.text & (filters.group | filters.private) & filters.incoming & filters.chat(AUTH_GROUPS) if AUTH_GROUPS else filters.text & (filters.group | filters.private) & filters.incoming)
 async def give_filter(client, message):
-    k = await global_filters(client, message)
-    if k == False:
-        await auto_filter(client, message)
+    await global_filters(client, message)
+    await auto_filter(client, message)
 
 
 @Client.on_callback_query(filters.regex(r"^next"))
